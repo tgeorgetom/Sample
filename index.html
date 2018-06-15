@@ -9,20 +9,32 @@
 	<meta name="author" content="">
 
 	<title>George</title>
-	<link rel="stylesheet" href="css/normalize.css" ></link>
-	<link rel="stylesheet" href="css/bootstrap.min.css" ></link>
-	<link rel="stylesheet" href="css/font-awesome.min.css" ></link>
-	<link rel="stylesheet" href="css/custom.css" ></link>
-	<link rel="stylesheet" href="css/animate.css" ></link>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/custom.css" />
+	<link rel="stylesheet" href="css/animate.css" />
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
 </head>
 
 <body class="">
 
-	<div class="complete_wrapper">
+
+	<div id="overlay" class="hover_ease_5">
+		<div class="bar_wrapper">
+			<div class="bar">
+				<div class="circle"></div>
+				<p>Loading</p>
+			</div>
+		</div>
+		<div style="opacity: 0;" id="progress"></div>
+		<div style="opacity: 0;" id="progstat"></div>
+	</div>	
+
+	<div class="complete_wrapper ">
 		<section class="Banner">
-			<canvas id="canvas" height="200px" width="500px;"></canvas>
+			<canvas id="canvas" height="200px" width="500"></canvas>
 			<div class="banner-top clearfix">
 				<div class="banner-top-left pull-left">
 					<h1 class="logo">GT</h1>
@@ -35,9 +47,9 @@
 				</div>
 			</div>
 			<div class="banner-content">
-				<div class="banner-profile-img"><img src="images/IMG-4985.JPG"></div>
+				<div class="banner-profile-img"><img src="images/IMG-4985.JPG" alt="Avatar"></div>
 				<h2 class="profile-name logo">George Thomas</h2>
-				<p class="profile-desig">Web designer - Developer</p>
+				<p class="profile-desig">UI/UX Designer - Developer</p>
 				<div class="Profile-social">
 					<ul>
 						<li><a class="hover_ease" href="https://www.facebook.com/george.tom.9212" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -49,20 +61,19 @@
 		</section>
 
 		<section class="section-body">
-			<!-- <canvas height="100"  id="large-header" width="100" id="demo-canvas"></canvas> -->
 			<div class="container">
-				<div class="section-content">
+				<div class="section-content wow fadeIn">
 					<h3 class="section-main-title">ABOUT.</h3>
 					<div class="row">
 						<div class="col-md-10 col-md-push-2">
 							<div class="row">
 								<div class="col-sm-12 about-details">
 									<h3 class="about-name">George Thomas</h3>
-									<p class="about-desig">Web Designer - Developer </p>
+									<p class="about-desig">UI/UX Designer - Developer </p>
 								</div>
 								<div class="col-sm-6 About-left">
 									<p class="about-desc-1">A <b>Talented Freelancer</b> Located In Our Lovely Earth </p>
-									<p class="about-desc-2">Four years of experience in wide range of design disciplines focusing on user interaction and user experience. Currently working as a Software Developer at <a href="https://www.ibusinessfunding.com/" target="_blank">iBusinesssoftware.</a></p>
+									<p class="about-desc-2">Four years of experience in wide range of design disciplines focusing on user interaction and user experience. Currently working as a Software Developer at <a href="https://www.epsilon.com/en_IN/home.html" target="_blank">Epsilon.</a></p>
 									<a href="#Contact" class="about-portfolio-btn hover_ease">MY PORTFOLIO <i class="fa fa-angle-right hover_ease" aria-hidden="true"></i></a>
 								</div>
 								<div class="col-sm-6 About-right">
@@ -100,8 +111,20 @@
 
 									<div class="employment-contents">
 										<div class="employment-content clearfix">
-											<div class="timeline-date Current">2016 - Till Date</div>
-											<div class="timeline-desc">
+											<div class="timeline-date wow fadeIn Current">2018 - Till Date</div>
+											<div class="timeline-desc wow fadeInUp" data-wow-offset="100">
+												<h4 class="employment-content-head">Front End Developer<span>_Epsilon</span></h4>
+												<p class="employment-content-desc">The Achiements and the knowledge gained with this company is keep increasing. I am responsible for maintaining complete Front End Development. </p>
+												<ul>
+													<li>Extensive use of HTML5, CSS3, XML, and JavaScript including jQuery library</li>
+													<li>Extensive use of Wordpress Themes</li>
+													<li>Worked with Express MVC framework for NodeJS ( MEAN Stack ) to create the routes required for delivering data to the front end.</li>
+												</ul>
+											</div>
+										</div>
+										<div class="employment-content clearfix">
+											<div class="timeline-date wow fadeIn ">2016 - 2018</div>
+											<div class="timeline-desc wow fadeInUp" data-wow-offset="100">
 												<h4 class="employment-content-head">Software Developer<span>_iBusiness Software</span></h4>
 												<p class="employment-content-desc">The Achiements and the knowledge gained with this company is keep increasing. I am responsible for maintaining complete Front End Development. </p>
 												<ul>
@@ -112,8 +135,8 @@
 											</div>
 										</div>
 										<div class="employment-content clearfix">
-											<div class="timeline-date">2014-2016</div>
-											<div class="timeline-desc">
+											<div class="timeline-date wow fadeIn">2014-2016</div>
+											<div class="timeline-desc wow fadeInUp" data-wow-offset="100">
 												<h4 class="employment-content-head">CSS Developer<span>_BSEtec</span></h4>
 												<p class="employment-content-desc">Started my career here and I was responsible for Converting the PSD's to HTML/Wordpress. With the Great team in here i have learnt to Develop a Responsive Web Design with and without any frameworks. </p>
 												<ul>
@@ -154,7 +177,7 @@
 			</div>
 		</section>
 
-		<section class="section-body ">
+		<section class="section-body Skills">
 			<div class="container">
 				<div class="section-content">
 					<h3 class="section-main-title">SKILLS.</h3>
@@ -162,47 +185,47 @@
 						<div class="col-md-10 col-md-push-2">
 							<div class="pskills-wrapper">
 								<h3 class="sub-head">Professional Skills</h3>
-								<div class="pskills-content">
+								<div class="pskills-content Professional_skills">
 									<ul>
 										<li class="html">
-											<div class="item_content">
-												<p>HTML5</p>
-												<span>95%</span>
+											<p>HTML5</p>
+											<div class="item_content hover_ease_5">
+												<span>100%</span>
 											</div>
 										</li>
 										<li class="css">
-											<div class="item_content">
-												<p>CSS3</p>
+											<p>CSS3</p>
+											<div class="item_content hover_ease_5">
 												<span>100%</span>
 											</div>
 										</li>
 										<li class="jQuery">
-											<div class="item_content">
-												<p>jQuery</p>
-												<span>75%</span>
+											<p>jQuery</p>
+											<div class="item_content hover_ease_5">
+												<span>90%</span>
 											</div>
 										</li>
 										<li class="Javascript">
-											<div class="item_content">
-												<p>Javascript</p>
-												<span>60%</span>
-											</div>
-										</li>
-										<li class="SASS">
-											<div class="item_content">
-												<p>SASS/LESS</p>
+											<p>Javascript</p>
+											<div class="item_content hover_ease_5">
 												<span>70%</span>
 											</div>
 										</li>
+										<li class="SASS">
+											<p>SASS/LESS</p>
+											<div class="item_content hover_ease_5">
+												<span>80%</span>
+											</div>
+										</li>
 										<li class="Angular">
-											<div class="item_content">
-												<p>Angular</p>
-												<span>40%</span>
+											<p>Angular</p>
+											<div class="item_content hover_ease_5">
+												<span>60%</span>
 											</div>
 										</li>
 										<li class="Wordpress">
-											<div class="item_content">
 												<p>Wordpress</p>
+											<div class="item_content">
 												<span>65%</span>
 											</div>
 										</li>
@@ -224,61 +247,42 @@
 								<div class="pskills-content My_Services">
 									<div class="row">
 										<div class="col-sm-6">
-											<div class="My_Services_content hover_ease_5">
+											<div class="My_Services_content hover_ease_5 wow fadeInUp" data-wow-offset="10"  data-wow-delay="0.1s">
 												<img src="images/s1.jpg" alt="..." class="hover_ease_5" />
 												<i>Web Design</i>
 											</div>
 										</div>
 										<div class="col-sm-6">
-											<div class="My_Services_content hover_ease_5">
+											<div class="My_Services_content hover_ease_5 wow fadeInUp" data-wow-offset="10"  data-wow-delay="0.2s">
 												<img src="images/s2.jpg" alt="..." class="hover_ease_5" />
 												<i>Web Development</i>
 											</div>
 										</div>
 										<div class="col-sm-6">
-											<div class="My_Services_content hover_ease_5">
+											<div class="My_Services_content hover_ease_5 wow fadeInUp" data-wow-offset="10"  data-wow-delay="0.3s">
 												<img src="images/s3.jpg" alt="..." class="hover_ease_5" />
 												<i>Mobile Apps</i>
 											</div>
 										</div>
 										<div class="col-sm-6">
-											<div class="My_Services_content hover_ease_5">
+											<div class="My_Services_content hover_ease_5 wow fadeInUp" data-wow-offset="10"  data-wow-delay="0.4s">
 												<img src="images/s4.jpg" alt="..." class="hover_ease_5" />
 												<i>Emailing</i>
 											</div>
 										</div>
 										<div class="col-sm-6">
-											<div class="My_Services_content hover_ease_5">
+											<div class="My_Services_content hover_ease_5 wow fadeInUp" data-wow-offset="10"  data-wow-delay="0.5s">
 												<img src="images/s5.jpg" alt="..." class="hover_ease_5" />
 												<i>Graphic Design</i>
 											</div>
 										</div>
 										<div class="col-sm-6">
-											<div class="My_Services_content hover_ease_5">
+											<div class="My_Services_content hover_ease_5 wow fadeInUp" data-wow-offset="10"  data-wow-delay="0.6s">
 												<img src="images/s6.jpg" alt="..." class="hover_ease_5" />
 												<i>Web Design</i>
 											</div>
 										</div>
-									<ul>
-										<li>
-
-										</li>
-										<li>
-
-										</li>
-										<li>
-
-										</li>
-										<li>
-
-										</li>
-										<li>
-
-										</li>
-										<li>
-
-										</li>
-									</ul>
+									
 									</div>
 								</div>
 							</div>
@@ -299,7 +303,7 @@
 
 							<div class="map-wrapper">
 								<h3 class="sub-head map-head">Map Location</h3>
-								<div class="map-content">
+								<div class="map-content wow fadeIn" >
 									<div id="map"></div>
 								</div>
 							</div>
@@ -309,7 +313,7 @@
 								<div class="row">
 									<div class="col-md-4">
 
-										<div class="contact-addr contact-content">
+										<div class="contact-addr contact-content wow fadeInUp" data-wow-offset="10" data-wow-delay=".1s">
 											<p class="contact-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></p>
 											<h4>Address</h4>
 											<div>Bangalore</div>
@@ -318,7 +322,7 @@
 									</div>
 									<div class="col-md-4">
 
-										<div class="contact-phn contact-content">
+										<div class="contact-phn contact-content wow fadeInUp" data-wow-offset="10" data-wow-delay=".2s">
 											<p class="contact-icon"><i class="fa fa-mobile" aria-hidden="true"></i></p>
 											<h4>Phone</h4>
 											<div><a href="tel:+919535151102">953-515-1102</a></div>
@@ -327,7 +331,7 @@
 									</div>
 									<div class="col-md-4">
 
-										<div class="contact-email contact-content">
+										<div class="contact-email contact-content wow fadeInUp" data-wow-offset="10" data-wow-delay=".3s">
 											<p class="contact-icon"><i class="fa fa-envelope" aria-hidden="true"></i></p>
 											<h4>Email</h4>
 											<div><a href="mailto:tgeorgetom@gmail.com">tgeorgetom@gmail.com</a></div>
@@ -343,23 +347,23 @@
 									<form>
 										<div class="row">
 											<div class="col-sm-6">
-												<div class="form-group">
+												<div class="form-group  wow fadeIn" data-wow-delay=".1s" data-wow-offset="10">
 													<input class="form-control" id="name" placeholder="Name" name="email" type="text">
 												</div>
 											</div>
 											<div class="col-sm-6">
-												<div class="form-group">
+												<div class="form-group  wow fadeIn" data-wow-delay=".2s" data-wow-offset="10">
 													<input class="form-control" id="email" placeholder="Email" name="email" type="email">
 												</div>
 											</div>
 											<div class="col-sm-12">
-												<div class="form-group">
+												<div class="form-group  wow fadeIn" data-wow-delay=".3s" data-wow-offset="10">
 													<input class="form-control" id="subject" placeholder="Subject" name="subject" type="text">
 												</div>
 											</div>
 											<div class="col-sm-12">
-												<div class="form-group">
-													<textarea class="form-control" id="subject" placeholder="Send a Message" name="message"></textarea>
+												<div class="form-group  wow fadeIn" data-wow-delay=".4s" data-wow-offset="10">
+													<textarea class="form-control" id="message" placeholder="Send a Message" name="message"></textarea>
 												</div>
 											</div>
 											<div class="col-sm-12">
@@ -378,7 +382,7 @@
 		</section>
 
 		<footer>
-			<!-- <canvas id="canvas_footer" height="200px" width="500px;"></canvas> -->
+			
 			<div class="footer_content">
 				<h2 class="foot_name"><a href="">GT.</a></h2>
 				<ul class="footer_social">
@@ -392,15 +396,19 @@
 	</div>
 
 
-
 	<script type="text/javascript" src="js/jquery.js" ></script>
 	<script type="text/javascript" src="js/bootstrap.min.js" ></script>
 	<script type="text/javascript" src="js/web.js"></script>
 	<script type="text/javascript" src="js/noise.js"></script>
+	<script type="text/javascript" src="js/wow.min.js"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&callback=initMap" async defer></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD79MY72taVRlZVX2DU6L5PXOh3ezUUKMc&callback=initMap" async defer></script>
 
+	<script type="text/javascript">
+			
+		 new WOW().init();
 
+	</script>
 
 
 </body>

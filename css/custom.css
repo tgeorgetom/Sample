@@ -31,6 +31,79 @@ a:focus{
 	outline: none;
 }
 
+
+
+
+
+
+#overlay{
+	background: #E91E63 none repeat scroll 0 0;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top:0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 55;
+}
+
+
+.bar {
+  position: relative;
+  height: 2px;
+  max-width: 50%;
+  margin: 0 auto;
+  background: #fff;
+  margin-top: 70px;
+}
+
+.circle {
+  position: absolute;
+  top: -50px;
+  margin-left: -20px;
+  height: 60px;
+  width: 60px;
+  left: 0;
+  background: #fff;
+  border-radius: 30%;
+  -webkit-animation: move 5s infinite;
+}
+
+.bar p {
+  position: absolute;
+  top: -35px;
+  right: -85px;
+  text-transform: uppercase;
+  color: #E91E63;
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+.bar_wrapper {
+    max-width: 840px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: scale(1) translate(-51%,-50%);
+    top: 50%;
+    left: 50%;
+    /*transform-origin: left;*/
+    width: 100%;
+}
+
+@-webkit-keyframes move {
+  0% {left: 0;}
+  50% {left: 100%; -webkit-transform: rotate(450deg); width: 150px; height: 150px;}
+  75% {left: 100%; -webkit-transform: rotate(450deg); width: 150px; height: 150px;}
+  100 {right: 100%;}
+} 
+
+.hideOverlay {
+	opacity: 0;
+	visibility: hidden;
+}
 /********** Header ************/
 
 
@@ -157,15 +230,13 @@ body {
 /*About*/
 
 .section-body {
-	/*background: #fafafa none repeat scroll 0 0;*/
-	/*background: linear-gradient(90deg ,#E30B55 30%, #E91E63 80%);*/
-	padding: 70px 50px;
+	padding: 100px 50px;
 	background-image: url('../images/bg-pattern.png');
-	border-bottom: 15px solid rgba(0,0,0,0.1);
+	border-bottom: 15px solid rgba(0,0,0,0.3);
 }
 .section-content {
-	border: 15px solid rgba(0,0,0,0.1);
-	padding: 70px 50px;
+	border: 15px solid rgba(0,0,0,0.3);
+	padding: 100px 50px;
 	position: relative;
 }
 
@@ -199,8 +270,8 @@ body {
 	color: #fff;
 	text-decoration: underline;
 }
-.about-portfolio-btn  , .send_mail{
-	background: rgba(0,0,0,0.2);
+.about-portfolio-btn, .send_mail{
+	background: rgba(0,0,0,0.3);
 	border: 1.5px dashed transparent;
 	border-radius: 20px;
 	color: rgba(255,255,255,.2);
@@ -232,7 +303,7 @@ body {
 	left: 8%;
 	opacity: 0.2;
 	position: absolute;
-	top: 0px;
+	top: 30px;
 	transform: rotateZ(-90deg) translate(-100%);
 	transform-origin: left center 0;
 	text-shadow: 0px 0px 10px rgba(0,0,0,0.8);
@@ -242,8 +313,8 @@ body {
 .about-right-content {
 	padding: 30px;
 	background: rgba(0,0,0,0.1);
-	border-radius: 5px;
-	border: 1.5px dashed rgba(0,0,0,0.3);
+	border-radius: 10px;
+	border: 2.5px dashed rgba(0,0,0,0.7);
 	font-size: 13px;
 	margin-top: 30px;
 	color: #fff;
@@ -276,9 +347,7 @@ body {
 /*Resume*/
 
 .section-body.section-gray {
-	/*background: #eeeeee none repeat scroll 0 0;*/
 	background: #C2185B;
-	/*background: linear-gradient(90deg ,#422b57 30%, #473f50 80%);*/
 	background: linear-gradient(90deg ,#644b7b 30%, #4a3e59 80%);
 	background: url('../images/bg-pattern.png');
 }
@@ -321,8 +390,12 @@ body {
 }
 .employment-contents::before {
 	background: rgba(255,255,255,0.1);
+	background: -moz-linear-gradient(top, rgba(255,255,255,0.1) 90%, rgba(255,255,255,0)99%, rgba(255,255,255,0) 100%, rgba(255,255,255,0)) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0.1) 90%,rgba(255,255,255,0) 99%,rgba(255,255,255,0) 100%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(255,255,255,0.1) 90%,rgba(255,255,255,0) 99%,rgba(255,255,255,0) 100%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); 
 	content: "";
-	height: 80%;
+	height: 95%;
 	left: 19px;
 	position: absolute;
 	top: 70px;
@@ -346,16 +419,17 @@ body {
 	width: 99px;
 	text-align: center;
 }
-/*.timeline-date.Current {
+.timeline-date.Current{
 	background: linear-gradient(45deg ,#4e93e6 30%, #864be3 70%);
-	padding: 4px 30px;
 	border: none;
-}*/
+	color: #fff;
+}
+
 .timeline-date::after {
 	background: #000;
-	border: 3px solid #907B82;
+	border: 2px solid #907B82;
 	border-radius: 50%;
-	content: ".";
+	content: "";
 	display: block;
 	height: 14px;
 	left: -39px;
@@ -415,6 +489,7 @@ body {
 	text-transform: capitalize;
 	margin: 0;
 	padding: 13px;
+	position: relative;
 }
 .pskills-content.Personal_skills li::before {
 	content: "";
@@ -464,7 +539,7 @@ body {
 	top: 0;
 	background: rgba(0,0,0,0.5);
 	padding: 15px;
-	display: table;
+	display: block;
 	z-index: 5;
 	background-clip: content-box;
 	transition: 0.5s linear 0s;
@@ -554,7 +629,7 @@ body {
   opacity: 0.6;
 }
 .email-content input, .email-content textarea {
-	background: rgba(0,0,0,0.1);
+	background: rgba(0,0,0,0.3);
 	border: none;
 	box-shadow: none !important;
 	resize: none;
@@ -571,80 +646,68 @@ body {
 
 /**** Skills ****/
 
-.pskills-content {
-	height: 250px;
-	color: #fff;
+.pskills-wrapper {
+    color: #fff;
 }
-.pskills-content ul {
-	height: 100%;
-	max-width: 600px;
-	width: 100%;
-	display: flex;
-	margin: 0 auto;
-}
-.pskills-content li {
-	width: 10%;
-	height: 100%;
-	position: relative;
-
-	margin: 0 13px;
+.pskills-content.Professional_skills {
+    max-width: 630px;
 }
 .pskills-content li .item_content{
-	background: rgba(0,0,0,0.1);
+	background: linear-gradient(45deg ,#4e93e6 30%, #864be3 70%);
+    position: relative;
+    margin-bottom: 30px;
+    height: 10px;
+    width: 0;
+    opacity: 0;
+    transition: all 1.5s ease-in-out ;
 }
-.pskills-content li.html .item_content{
-	height: 95%;
+.OnView .pskills-content li.html .item_content{
+	width: 95%;
+	opacity: 1;
+	transition-delay: .1s
 }
-.pskills-content li.css .item_content{
-	height: 100%;
-}
-.pskills-content li.jQuery .item_content{
-	height: 75%;
-}
-.pskills-content li.Javascript .item_content{
-	height: 60%;
-}
-.pskills-content li.SASS .item_content{
-	height: 70%;
-}
-.pskills-content li.Angular .item_content{
-	height: 40%;
-}
-.pskills-content li.Wordpress .item_content{
-	height: 65%;
-}
-.item_content {
-	background: lightblue;
-	bottom: 0;
-	position: absolute;
+.OnView .pskills-content li.css .item_content{
 	width: 100%;
-	    background: rgba(7,176,148,1);
-    background: -moz-linear-gradient(-45deg, rgba(7,176,148,1) 0%, rgba(28,54,71,1) 100%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(7,176,148,1)), color-stop(100%, rgba(28,54,71,1)));
-    background: -webkit-linear-gradient(-45deg, rgba(7,176,148,1) 0%, rgba(28,54,71,1) 100%);
-    background: -o-linear-gradient(-45deg, rgba(7,176,148,1) 0%, rgba(28,54,71,1) 100%);
-    background: -ms-linear-gradient(-45deg, rgba(7,176,148,1) 0%, rgba(28,54,71,1) 100%);
+	opacity: 1;
+	transition-delay: .2
 }
-.pskills-content p {
-	position: absolute;
-	bottom: 10px;
-	left: 28px;
-	transform: rotate(-90deg);
-	transform-origin: left;
-	width: 100px;
-	font-size: 11px;
-	font-weight: 700;
-	/*color: #907B82;*/
-	opacity: 0.6
+.OnView .pskills-content li.jQuery .item_content{
+	width: 90%;
+	opacity: 1;
+	transition-delay: .3s
 }
-.pskills-content span {
-	position: absolute;
-	left: 33%;
-	top: 15px;
-	font-size: 11px;
-	transform: rotate(-90deg);
-	/*color: #907B82;*/
-	opacity: 0.6
+.OnView .pskills-content li.Javascript .item_content{
+	width: 70%;
+	opacity: 1;
+	transition-delay: .4s
+}
+.OnView .pskills-content li.SASS .item_content{
+	width: 80%;
+	opacity: 1;
+	transition-delay: .5s
+}
+.OnView .pskills-content li.Angular .item_content{
+	width: 60%;
+	opacity: 1;
+	transition-delay: .6s
+}
+.OnView .pskills-content li.Wordpress .item_content{
+	width: 65%;
+	opacity: 1;
+	transition-delay: .7s
+}
+
+.item_content span {
+    position: absolute;
+    left: 102%;
+    top: -4px;
+    font-size: 12px;
+    color: #fff;
+}
+.pskills-content.Professional_skills li p {
+    color:  #fff;
+    font-size: 13px;
+    padding-bottom: 10px;
 }
 
 /**** Skills ****/
@@ -844,6 +907,9 @@ body{
 footer{
 	padding: 40px;
 }
+.pskills-content.Personal_skills ul{
+	display: block;
+}
 .pskills-content.Personal_skills li {
 	display: block;
 }
@@ -882,19 +948,18 @@ footer{
 	height: auto;
 	margin: 10px 0px;
 }
-.pskills-content .item_content {
-	height: 44px !important;
-	position: relative;
-}
 .pskills-content p {
 	transform: unset;
 	bottom: 33%;
 }
 .pskills-content span {
 	transform: unset;
-	right: 20px;
-	left: auto;
-	top: 15px;
+    right: 20px;
+    left: 93%;
+    top: -25px;
+}
+.bar{
+	transform: scale(0.5);
 }
 }
 
