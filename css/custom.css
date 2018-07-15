@@ -777,6 +777,11 @@ body {
     width: 100%;
     height: 200px;
 }
+
+.portfolio .portfolio_content img {
+    width: 100%;
+    height: 240px;
+}
 .portfolio_in {
     padding: 20px;
     background: url('../images/bg-pattern.png');
@@ -917,6 +922,9 @@ body{
 footer{
     padding: 40px;
 }
+.pskills-content.Professional_skills {
+    width: 94%;
+}
 .pskills-content.Personal_skills ul{
     display: block;
 }
@@ -933,7 +941,7 @@ footer{
     padding-left: 15px;
     padding-top: 10px;
 }
-.portfolio_content img {
+.portfolio_content img,.portfolio .portfolio_content img {
     height: auto;
 }
 .portfolio_head{
@@ -980,6 +988,26 @@ footer{
 }
 .container{
     padding: 0;
+}
+.banner-top-left {
+    margin: 0 auto;
+    display: table;
+    float: none !important;
+}
+.banner-top-right{
+    display: none;
+}
+.banner-content{
+    top: 42%;
+}
+.about-right-content{
+    padding: 15px;
+}
+.timeline-date::after{
+    left: -29px;
+}
+.employment-contents {
+    padding-left: 40px;
 }
 }
 

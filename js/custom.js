@@ -1,4 +1,11 @@
 $(document).ready(function() {
+  
+  $('.portfolio_content').tilt({
+    maxTilt: 5,
+      glare: true,
+      maxGlare: .5
+  })
+
   function bg_img_adjust() {
     var window_width = $(window).width();
     if (window_width >= 767) {
@@ -25,7 +32,7 @@ $(document).ready(function() {
     if (window_width >= 767 && window_height <= 1000) {
       $(".Banner").css({ height: window_height });
     } else {
-      $(".Banner").css({ height: "700px" });
+      $(".Banner").css({ height: "600px" });
     }
   }
 
@@ -76,7 +83,7 @@ function gradient() {
     var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
     var color2 = "rgb(" + r2 + "," + g2 + "," + b2 + ")";
 
-    $(".Banner , footer")
+    $(".anner , footer")
       .css({
         background:
           "-webkit-gradient(linear, left top, right top, from(" +
