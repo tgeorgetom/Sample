@@ -83,7 +83,7 @@ function gradient() {
     var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
     var color2 = "rgb(" + r2 + "," + g2 + "," + b2 + ")";
 
-    $(".anner , footer")
+    $(".Banner , footer")
       .css({
         background:
           "-webkit-gradient(linear, left top, right top, from(" +
@@ -135,7 +135,7 @@ particlesJS(
         value: "#ffffff"
       },
       shape: {
-        type: "circle",
+        type: "",
         stroke: {
           width: 0,
           color: "#000000"
@@ -178,7 +178,7 @@ particlesJS(
       },
       move: {
         enable: true,
-        speed: 6,
+        speed: 3,
         direction: "none",
         random: false,
         straight: false,
@@ -190,44 +190,7 @@ particlesJS(
         }
       }
     },
-    interactivity: {
-      detect_on: "canvas",
-      events: {
-        onhover: {
-          enable: true,
-          mode: "repulse"
-        },
-        onclick: {
-          enable: true,
-          mode: "push"
-        },
-        resize: true
-      },
-      modes: {
-        grab: {
-          distance: 400,
-          line_linked: {
-            opacity: 1
-          }
-        },
-        bubble: {
-          distance: 400,
-          size: 40,
-          duration: 2,
-          opacity: 8,
-          speed: 3
-        },
-        repulse: {
-          distance: 200
-        },
-        push: {
-          particles_nb: 4
-        },
-        remove: {
-          particles_nb: 2
-        }
-      }
-    },
+
     retina_detect: true,
     config_demo: {
       hide_card: false,
